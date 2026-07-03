@@ -6,7 +6,7 @@ evaluation, and local visualization of exported web-demo JSON results.
 ## Install
 
 ```bash
-pip install nash-eval
+pip install git+https://github.com/raelee1026/tool-kit-nash.git
 ```
 
 For local development:
