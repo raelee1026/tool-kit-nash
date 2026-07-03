@@ -15,12 +15,18 @@ DEFAULT_THRESHOLD = 0.3763
 _DATASET_FILES = {
     "numfine_triplet": {
         "test": ["triplet_test.json"],
+        "easy": ["triplet_easy.json"],
+        "medium": ["triplet_medium.json"],
+        "hard": ["triplet_hard.json"],
+        "all": ["triplet_hard.json", "triplet_medium.json", "triplet_easy.json"],
     },
     "numfine_crosspair": {
         "test": ["crosspair_test.json"],
+        "all": ["crosspair.json"],
     },
     "numfine_listwise": {
         "test": ["listwise_test.json"],
+        "all": ["listwise.json"],
     },
 }
 
@@ -32,6 +38,10 @@ _TASK_DATASETS = {
 
 
 def load_dataset(name: str, split: str = "test", data_dir: str | None = None) -> NashDataset:
+    path = Path(name).expanduser()
+    if path.exists() and path.is_file():
+        return NashDataset(name=path.stem, records=_read_json_records(path), path=str(path.resolve()))
+
     dataset_name = _normalize_dataset_name(name)
     split_name = split.strip().lower() if split else "test"
     if dataset_name not in _DATASET_FILES:

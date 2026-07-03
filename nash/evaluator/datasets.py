@@ -38,13 +38,29 @@ LISTWISE_FIELD_ALIASES = {
 
 
 _DATASET_FILES = {
-    "numfine_triplet": ["triplet_test.json"],
-    "numfine_crosspair": ["crosspair_test.json"],
-    "numfine_listwise": ["listwise_test.json"],
+    "numfine_triplet": {
+        "test": ["triplet_test.json"],
+        "easy": ["triplet_easy.json"],
+        "medium": ["triplet_medium.json"],
+        "hard": ["triplet_hard.json"],
+        "all": ["triplet_hard.json", "triplet_medium.json", "triplet_easy.json"],
+    },
+    "numfine_crosspair": {
+        "test": ["crosspair_test.json"],
+        "all": ["crosspair.json"],
+    },
+    "numfine_listwise": {
+        "test": ["listwise_test.json"],
+        "all": ["listwise.json"],
+    },
 }
 
 
 def load_dataset(name: str, data_dir: str | Path | None = None, split: str | None = None) -> NashDataset:
+    path = Path(name).expanduser()
+    if path.exists() and path.is_file():
+        return NashDataset(name=path.stem, records=normalize_records(_load_records(path)), path=str(path.resolve()))
+
     normalized = name.strip().lower().replace("-", "_")
     if normalized not in _DATASET_FILES:
         choices = ", ".join(sorted(_DATASET_FILES))
@@ -135,14 +151,12 @@ def normalize_listwise_record(record: dict[str, Any]) -> dict[str, Any] | None:
 
 
 def _candidate_files(name: str, root: Path, split: str | None) -> list[Path]:
-    if split:
-        stemmed = []
-        for filename in _DATASET_FILES[name]:
-            path = Path(filename)
-            stemmed.append(path.with_name(f"{path.stem}_{split}{path.suffix}"))
-            stemmed.append(path.with_name(f"{split}_{path.name}"))
-        return [root / filename for filename in stemmed] + [root / filename for filename in _DATASET_FILES[name]]
-    return [root / filename for filename in _DATASET_FILES[name]]
+    split_name = (split or "test").strip().lower()
+    files = _DATASET_FILES[name].get(split_name)
+    if files is None:
+        choices = ", ".join(sorted(_DATASET_FILES[name]))
+        raise ValueError(f"Unknown split '{split}' for {name}. Supported splits: {choices}.")
+    return [root / filename for filename in files]
 
 
 def _load_records(path: Path) -> list[dict[str, Any]]:
