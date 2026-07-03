@@ -35,8 +35,6 @@ result = nash.evaluate(
     dataset,
     protocol="triplet",
     model="sentence-transformers/all-MiniLM-L6-v2",
-    device="cpu",
-    limit=1,
 )
 nash.export_web_json(result, "results.json")
 ```
@@ -107,7 +105,7 @@ You can load your own local JSON file if it follows the same task format:
 
 ```python
 dataset = nash.load_dataset("/path/to/my_triplet.json")
-result = nash.evaluate(dataset, protocol="triplet", device="cpu")
+result = nash.evaluate(dataset, protocol="triplet")
 ```
 
 Triplet rows should contain:
@@ -152,7 +150,6 @@ row = nash.score(
     "EPS rose 10% to $11.",
     "EPS was $10 in 2024, a 25% increase.",
     model="sentence-transformers/all-MiniLM-L6-v2",
-    device="cpu",
 )
 
 print(row["baseline_score"])
@@ -169,7 +166,6 @@ row = nash.score(
     "EPS was $10 in 2024, a 25% increase.",
     model="bert-base-uncased",
     backend="bertscore",
-    device="cpu",
 )
 ```
 
@@ -179,19 +175,16 @@ row = nash.score(
 triplet = nash.evaluate(
     nash.load_dataset("numfine_triplet", split="easy"),
     protocol="triplet",
-    device="cpu",
 )
 
 crosspair = nash.evaluate(
     nash.load_dataset("numfine_crosspair", split="all"),
     protocol="crosspair",
-    device="cpu",
 )
 
 listwise = nash.evaluate(
     nash.load_dataset("numfine_listwise", split="all"),
     protocol="listwise",
-    device="cpu",
 )
 ```
 
@@ -209,7 +202,7 @@ Triplet:
 import nash
 
 dataset = nash.load_dataset("numfine_triplet", split="easy")
-result = nash.evaluate(dataset, protocol="triplet", device="cpu", limit=10)
+result = nash.evaluate(dataset, protocol="triplet")
 nash.export_web_json(result, "triplet_results.json")
 ```
 
@@ -219,7 +212,7 @@ Cross-pair:
 import nash
 
 dataset = nash.load_dataset("numfine_crosspair", split="all")
-result = nash.evaluate(dataset, protocol="crosspair", device="cpu", limit=10)
+result = nash.evaluate(dataset, protocol="crosspair")
 nash.export_web_json(result, "crosspair_results.json")
 ```
 
@@ -229,7 +222,7 @@ Listwise:
 import nash
 
 dataset = nash.load_dataset("numfine_listwise", split="all")
-result = nash.evaluate(dataset, protocol="listwise", device="cpu", limit=3)
+result = nash.evaluate(dataset, protocol="listwise")
 nash.export_web_json(result, "listwise_results.json")
 ```
 
@@ -263,45 +256,5 @@ pip install -e .
 
 ## Package Metadata
 
-`pyproject.toml` contains the package version. Runtime warnings from PyTorch or
-Hugging Face are not caused by the package version field.
-
-When releasing a new package build, bump the version normally. Removing the
-version will not fix CUDA driver warnings or Hugging Face rate-limit warnings.
-
-## Troubleshooting
-
-CUDA warning:
-
-```text
-CUDA initialization: The NVIDIA driver on your system is too old
-```
-
-This comes from PyTorch detecting an incompatible CUDA driver. Use CPU mode:
-
-```python
-nash.evaluate(dataset, protocol="triplet", device="cpu")
-nash.score(sentence1, sentence2, device="cpu")
-```
-
-Or update the NVIDIA driver / install a PyTorch build compatible with the
-machine.
-
-Hugging Face warning:
-
-```text
-You are sending unauthenticated requests to the HF Hub
-```
-
-This only affects model download rate limits. To avoid it, authenticate with
-Hugging Face:
-
-```bash
-export HF_TOKEN=your_token_here
-```
-
-or:
-
-```bash
-huggingface-cli login
-```
+`pyproject.toml` contains the package version. When releasing a new package
+build, bump the version normally.
