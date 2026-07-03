@@ -15,18 +15,12 @@ DEFAULT_THRESHOLD = 0.3763
 _DATASET_FILES = {
     "numfine_triplet": {
         "test": ["triplet_test.json"],
-        "easy": ["triplet_easy.json"],
-        "medium": ["triplet_medium.json"],
-        "hard": ["triplet_hard.json"],
-        "all": ["triplet_hard.json", "triplet_medium.json", "triplet_easy.json"],
     },
     "numfine_crosspair": {
         "test": ["crosspair_test.json"],
-        "all": ["crosspair.json"],
     },
     "numfine_listwise": {
         "test": ["listwise_test.json"],
-        "all": ["listwise.json"],
     },
 }
 

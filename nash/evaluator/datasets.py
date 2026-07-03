@@ -38,21 +38,19 @@ LISTWISE_FIELD_ALIASES = {
 
 
 _DATASET_FILES = {
-    "numfine-triplet": ["triplet_hard.json", "triplet_medium.json", "triplet_easy.json"],
-    "numfine-crosspair": ["crosspair.json"],
-    "numfine-listwise": ["listwise.json"],
-    "finsts": ["finsts.json", "finsts.jsonl", "finsts.csv"],
-    "stsb": ["stsb.json", "stsb.jsonl", "stsb.csv"],
+    "numfine_triplet": ["triplet_test.json"],
+    "numfine_crosspair": ["crosspair_test.json"],
+    "numfine_listwise": ["listwise_test.json"],
 }
 
 
 def load_dataset(name: str, data_dir: str | Path | None = None, split: str | None = None) -> NashDataset:
-    normalized = name.strip().lower()
+    normalized = name.strip().lower().replace("-", "_")
     if normalized not in _DATASET_FILES:
         choices = ", ".join(sorted(_DATASET_FILES))
         raise ValueError(f"Unknown dataset '{name}'. Available datasets: {choices}.")
 
-    root = Path(data_dir) if data_dir is not None else Path(__file__).resolve().parents[2] / "data"
+    root = Path(data_dir) if data_dir is not None else Path(__file__).resolve().parents[1] / "data"
     candidate_files = _candidate_files(normalized, root, split)
     records: list[dict[str, Any]] = []
     loaded_paths: list[str] = []
