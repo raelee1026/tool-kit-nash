@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "source": "10K",
+    "category": "Temporal",
+    "subcategory": "date",
+    "sentence_a": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+      "num": "2024"
+    },
+    "sentence_b": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2021 by $106 million.",
+      "num": "2021"
+    },
+    "sentence_c": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2052 by $106 million.",
+      "num": "2052"
+    }
+  },
+  {
+    "id": 1,
+    "source": "10K",
+    "category": "Monetary",
+    "subcategory": "change",
+    "sentence_a": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+      "num": "106"
+    },
+    "sentence_b": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $90 million.",
+      "num": "90"
+    },
+    "sentence_c": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $16 million.",
+      "num": "16"
+    }
+  },
+  {
+    "id": 2,
+    "source": "10K",
+    "category": "Quantity",
+    "subcategory": "Quantity",
+    "sentence_a": {
+      "text": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "10"
+    },
+    "sentence_b": {
+      "text": "AbbVie repurchased 11 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "11"
+    },
+    "sentence_c": {
+      "text": "AbbVie repurchased 1 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "1"
+    }
+  },
+  {
+    "id": 3,
+    "source": "10K",
+    "category": "Monetary",
+    "subcategory": "money",
+    "sentence_a": {
+      "text": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "1.6"
+    },
+    "sentence_b": {
+      "text": "AbbVie repurchased 10 million shares for $1.8 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "1.8"
+    },
+    "sentence_c": {
+      "text": "AbbVie repurchased 10 million shares for $3.1 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "3.1"
+    }
+  }
+]

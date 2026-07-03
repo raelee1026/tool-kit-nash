@@ -1,0 +1,55 @@
+{
+  "id": "triplet_001",
+  "type": "triplet",
+  "title": "Revenue growth triplet",
+  "anchor": "Revenue increased by 3.5% in Q2.",
+  "positive": "Revenue increased by 4% in Q2.",
+  "negative": "Revenue increased by 35% in Q2.",
+  "baselines": [
+    {
+      "name": "baseline / bert-base-uncased",
+      "baseline_anchor_positive": 0.963,
+      "baseline_anchor_negative": 0.972,
+      "nash_anchor_positive": 0.912,
+      "nash_anchor_negative": 0.641,
+      "baseline_ranking": "wrong",
+      "nash_ranking": "correct"
+    },
+    {
+      "name": "FinBERT",
+      "baseline_anchor_positive": 0.958,
+      "baseline_anchor_negative": 0.969,
+      "nash_anchor_positive": 0.901,
+      "nash_anchor_negative": 0.655,
+      "baseline_ranking": "wrong",
+      "nash_ranking": "correct"
+    },
+    {
+      "name": "DeBERTa",
+      "baseline_anchor_positive": 0.952,
+      "baseline_anchor_negative": 0.961,
+      "nash_anchor_positive": 0.894,
+      "nash_anchor_negative": 0.626,
+      "baseline_ranking": "wrong",
+      "nash_ranking": "correct"
+    },
+    {
+      "name": "Sentence-BERT / all-MiniLM-L6-v2",
+      "baseline_anchor_positive": 0.936,
+      "baseline_anchor_negative": 0.944,
+      "nash_anchor_positive": 0.873,
+      "nash_anchor_negative": 0.617,
+      "baseline_ranking": "wrong",
+      "nash_ranking": "correct"
+    },
+    {
+      "name": "Qwen3-Embedding-0.6B",
+      "baseline_anchor_positive": 0.947,
+      "baseline_anchor_negative": 0.955,
+      "nash_anchor_positive": 0.889,
+      "nash_anchor_negative": 0.652,
+      "baseline_ranking": "wrong",
+      "nash_ranking": "correct"
+    }
+  ]
+}

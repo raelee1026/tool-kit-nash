@@ -1,0 +1,146 @@
+[
+  {
+    "id": 0,
+    "source": "10K",
+    "category": "Temporal",
+    "subcategory": "date",
+    "sentence_a": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+      "num": "2024"
+    },
+    "candidates": [
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2030 by $106 million.",
+        "num": "2030"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2042 by $106 million.",
+        "num": "2042"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2021 by $106 million.",
+        "num": "2021"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2046 by $106 million.",
+        "num": "2046"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2052 by $106 million.",
+        "num": "2052"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 1997 by $106 million.",
+        "num": "1997"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2036 by $106 million.",
+        "num": "2036"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2013 by $106 million.",
+        "num": "2013"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2035 by $106 million.",
+        "num": "2035"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "source": "10K",
+    "category": "Monetary",
+    "subcategory": "change",
+    "sentence_a": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+      "num": "106"
+    },
+    "candidates": [
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $16 million.",
+        "num": "16"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $37 million.",
+        "num": "37"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $81 million.",
+        "num": "81"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $90 million.",
+        "num": "90"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $78 million.",
+        "num": "78"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $36 million.",
+        "num": "36"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $126 million.",
+        "num": "126"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $138 million.",
+        "num": "138"
+      },
+      {
+        "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $168 million.",
+        "num": "168"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "source": "10K",
+    "category": "Quantity",
+    "subcategory": "Quantity",
+    "sentence_a": {
+      "text": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "10"
+    },
+    "candidates": [
+      {
+        "text": "AbbVie repurchased 4 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "4"
+      },
+      {
+        "text": "AbbVie repurchased 17 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "17"
+      },
+      {
+        "text": "AbbVie repurchased 5 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "5"
+      },
+      {
+        "text": "AbbVie repurchased 8 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "8"
+      },
+      {
+        "text": "AbbVie repurchased 11 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "11"
+      },
+      {
+        "text": "AbbVie repurchased 1 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "1"
+      },
+      {
+        "text": "AbbVie repurchased 16 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "16"
+      },
+      {
+        "text": "AbbVie repurchased 18 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "18"
+      },
+      {
+        "text": "AbbVie repurchased 9 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+        "num": "9"
+      }
+    ]
+  }
+]

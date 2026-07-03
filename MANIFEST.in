@@ -1,0 +1,2 @@
+recursive-include nash/web *
+recursive-include nash/data *.json

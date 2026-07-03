@@ -1,0 +1,562 @@
+[
+  {
+    "id": "example_001",
+    "type": "pairwise",
+    "title": "Revenue growth mismatch",
+    "sentence1": "Revenue increased by 3.5% in Q2.",
+    "sentence2": "Revenue increased by 35% in Q2.",
+    "baselines": [
+      {
+        "name": "baseline / bert-base-uncased",
+        "baseline_score": 0.982,
+        "nash_score": 0.641,
+        "text_score": 0.954,
+        "numeric_score": 0.21
+      },
+      {
+        "name": "FinBERT",
+        "baseline_score": 0.974,
+        "nash_score": 0.655,
+        "text_score": 0.948,
+        "numeric_score": 0.236
+      },
+      {
+        "name": "DeBERTa",
+        "baseline_score": 0.969,
+        "nash_score": 0.626,
+        "text_score": 0.941,
+        "numeric_score": 0.198
+      },
+      {
+        "name": "Sentence-BERT / all-MiniLM-L6-v2",
+        "baseline_score": 0.957,
+        "nash_score": 0.617,
+        "text_score": 0.927,
+        "numeric_score": 0.214
+      },
+      {
+        "name": "Qwen3-Embedding-0.6B",
+        "baseline_score": 0.963,
+        "nash_score": 0.652,
+        "text_score": 0.936,
+        "numeric_score": 0.241
+      }
+    ],
+    "numbers1": [
+      {
+        "id": "s1_n1",
+        "text": "3.5%",
+        "value": 3.5,
+        "start": 21,
+        "end": 25
+      },
+      {
+        "id": "s1_n2",
+        "text": "Q2",
+        "value": 2,
+        "start": 29,
+        "end": 31
+      }
+    ],
+    "numbers2": [
+      {
+        "id": "s2_n1",
+        "text": "35%",
+        "value": 35,
+        "start": 21,
+        "end": 24
+      },
+      {
+        "id": "s2_n2",
+        "text": "Q2",
+        "value": 2,
+        "start": 28,
+        "end": 30
+      }
+    ],
+    "alignments": [
+      {
+        "source": "s1_n1",
+        "target": "s2_n1",
+        "source_text": "3.5%",
+        "target_text": "35%",
+        "alignment_similarity": 0.94,
+        "numeric_gap": 31.5,
+        "status": "aligned"
+      },
+      {
+        "source": "s1_n2",
+        "target": "s2_n2",
+        "source_text": "Q2",
+        "target_text": "Q2",
+        "alignment_similarity": 0.99,
+        "numeric_gap": 0,
+        "status": "aligned"
+      }
+    ],
+    "heatmap": {
+      "rows": [
+        "3.5%",
+        "Q2"
+      ],
+      "columns": [
+        "35%",
+        "Q2"
+      ],
+      "values": [
+        [
+          0.94,
+          0.21
+        ],
+        [
+          0.19,
+          0.99
+        ]
+      ]
+    },
+    "masked_sentence1": "Revenue increased by [NUM] in [NUM].",
+    "masked_sentence2": "Revenue increased by [NUM] in [NUM]."
+  },
+  {
+    "id": "example_002",
+    "type": "pairwise",
+    "title": "Earnings scale mismatch",
+    "sentence1": "The company reported earnings of $1.2 million.",
+    "sentence2": "The company reported earnings of $12 million.",
+    "baselines": [
+      {
+        "name": "baseline / bert-base-uncased",
+        "baseline_score": 0.977,
+        "nash_score": 0.598,
+        "text_score": 0.946,
+        "numeric_score": 0.142
+      },
+      {
+        "name": "FinBERT",
+        "baseline_score": 0.981,
+        "nash_score": 0.622,
+        "text_score": 0.952,
+        "numeric_score": 0.181
+      },
+      {
+        "name": "DeBERTa",
+        "baseline_score": 0.968,
+        "nash_score": 0.604,
+        "text_score": 0.939,
+        "numeric_score": 0.162
+      },
+      {
+        "name": "Sentence-BERT / all-MiniLM-L6-v2",
+        "baseline_score": 0.951,
+        "nash_score": 0.586,
+        "text_score": 0.917,
+        "numeric_score": 0.174
+      },
+      {
+        "name": "Qwen3-Embedding-0.6B",
+        "baseline_score": 0.959,
+        "nash_score": 0.615,
+        "text_score": 0.928,
+        "numeric_score": 0.192
+      }
+    ],
+    "numbers1": [
+      {
+        "id": "s1_n1",
+        "text": "$1.2 million",
+        "value": 1200000,
+        "start": 33,
+        "end": 45
+      }
+    ],
+    "numbers2": [
+      {
+        "id": "s2_n1",
+        "text": "$12 million",
+        "value": 12000000,
+        "start": 33,
+        "end": 44
+      }
+    ],
+    "alignments": [
+      {
+        "source": "s1_n1",
+        "target": "s2_n1",
+        "source_text": "$1.2 million",
+        "target_text": "$12 million",
+        "alignment_similarity": 0.97,
+        "numeric_gap": 10800000,
+        "status": "aligned"
+      }
+    ],
+    "heatmap": {
+      "rows": [
+        "$1.2 million"
+      ],
+      "columns": [
+        "$12 million"
+      ],
+      "values": [
+        [
+          0.97
+        ]
+      ]
+    },
+    "masked_sentence1": "The company reported earnings of [NUM].",
+    "masked_sentence2": "The company reported earnings of [NUM]."
+  },
+  {
+    "id": "example_003",
+    "type": "pairwise",
+    "title": "Margin change mismatch",
+    "sentence1": "Operating margin improved from 8% to 10%.",
+    "sentence2": "Operating margin improved from 8% to 20%.",
+    "baselines": [
+      {
+        "name": "baseline / bert-base-uncased",
+        "baseline_score": 0.984,
+        "nash_score": 0.756,
+        "text_score": 0.961,
+        "numeric_score": 0.486
+      },
+      {
+        "name": "FinBERT",
+        "baseline_score": 0.979,
+        "nash_score": 0.769,
+        "text_score": 0.957,
+        "numeric_score": 0.512
+      },
+      {
+        "name": "DeBERTa",
+        "baseline_score": 0.973,
+        "nash_score": 0.742,
+        "text_score": 0.948,
+        "numeric_score": 0.474
+      },
+      {
+        "name": "Sentence-BERT / all-MiniLM-L6-v2",
+        "baseline_score": 0.956,
+        "nash_score": 0.728,
+        "text_score": 0.925,
+        "numeric_score": 0.488
+      },
+      {
+        "name": "Qwen3-Embedding-0.6B",
+        "baseline_score": 0.964,
+        "nash_score": 0.761,
+        "text_score": 0.938,
+        "numeric_score": 0.529
+      }
+    ],
+    "numbers1": [
+      {
+        "id": "s1_n1",
+        "text": "8%",
+        "value": 8,
+        "start": 31,
+        "end": 33
+      },
+      {
+        "id": "s1_n2",
+        "text": "10%",
+        "value": 10,
+        "start": 37,
+        "end": 40
+      }
+    ],
+    "numbers2": [
+      {
+        "id": "s2_n1",
+        "text": "8%",
+        "value": 8,
+        "start": 31,
+        "end": 33
+      },
+      {
+        "id": "s2_n2",
+        "text": "20%",
+        "value": 20,
+        "start": 37,
+        "end": 40
+      }
+    ],
+    "alignments": [
+      {
+        "source": "s1_n1",
+        "target": "s2_n1",
+        "source_text": "8%",
+        "target_text": "8%",
+        "alignment_similarity": 0.98,
+        "numeric_gap": 0,
+        "status": "aligned"
+      },
+      {
+        "source": "s1_n2",
+        "target": "s2_n2",
+        "source_text": "10%",
+        "target_text": "20%",
+        "alignment_similarity": 0.96,
+        "numeric_gap": 10,
+        "status": "aligned"
+      }
+    ],
+    "heatmap": {
+      "rows": [
+        "8%",
+        "10%"
+      ],
+      "columns": [
+        "8%",
+        "20%"
+      ],
+      "values": [
+        [
+          0.98,
+          0.33
+        ],
+        [
+          0.29,
+          0.96
+        ]
+      ]
+    },
+    "masked_sentence1": "Operating margin improved from [NUM] to [NUM].",
+    "masked_sentence2": "Operating margin improved from [NUM] to [NUM]."
+  },
+  {
+    "id": "example_004",
+    "type": "pairwise",
+    "title": "Guidance date mismatch",
+    "sentence1": "The firm expects revenue to reach $5 billion by 2026.",
+    "sentence2": "The firm expects revenue to reach $5 billion by 2028.",
+    "baselines": [
+      {
+        "name": "baseline / bert-base-uncased",
+        "baseline_score": 0.989,
+        "nash_score": 0.814,
+        "text_score": 0.969,
+        "numeric_score": 0.61
+      },
+      {
+        "name": "FinBERT",
+        "baseline_score": 0.986,
+        "nash_score": 0.823,
+        "text_score": 0.964,
+        "numeric_score": 0.632
+      },
+      {
+        "name": "DeBERTa",
+        "baseline_score": 0.975,
+        "nash_score": 0.801,
+        "text_score": 0.951,
+        "numeric_score": 0.608
+      },
+      {
+        "name": "Sentence-BERT / all-MiniLM-L6-v2",
+        "baseline_score": 0.962,
+        "nash_score": 0.787,
+        "text_score": 0.932,
+        "numeric_score": 0.616
+      },
+      {
+        "name": "Qwen3-Embedding-0.6B",
+        "baseline_score": 0.968,
+        "nash_score": 0.817,
+        "text_score": 0.942,
+        "numeric_score": 0.664
+      }
+    ],
+    "numbers1": [
+      {
+        "id": "s1_n1",
+        "text": "$5 billion",
+        "value": 5000000000,
+        "start": 34,
+        "end": 44
+      },
+      {
+        "id": "s1_n2",
+        "text": "2026",
+        "value": 2026,
+        "start": 48,
+        "end": 52
+      }
+    ],
+    "numbers2": [
+      {
+        "id": "s2_n1",
+        "text": "$5 billion",
+        "value": 5000000000,
+        "start": 34,
+        "end": 44
+      },
+      {
+        "id": "s2_n2",
+        "text": "2028",
+        "value": 2028,
+        "start": 48,
+        "end": 52
+      }
+    ],
+    "alignments": [
+      {
+        "source": "s1_n1",
+        "target": "s2_n1",
+        "source_text": "$5 billion",
+        "target_text": "$5 billion",
+        "alignment_similarity": 0.99,
+        "numeric_gap": 0,
+        "status": "aligned"
+      },
+      {
+        "source": "s1_n2",
+        "target": "s2_n2",
+        "source_text": "2026",
+        "target_text": "2028",
+        "alignment_similarity": 0.91,
+        "numeric_gap": 2,
+        "status": "aligned"
+      }
+    ],
+    "heatmap": {
+      "rows": [
+        "$5 billion",
+        "2026"
+      ],
+      "columns": [
+        "$5 billion",
+        "2028"
+      ],
+      "values": [
+        [
+          0.99,
+          0.22
+        ],
+        [
+          0.18,
+          0.91
+        ]
+      ]
+    },
+    "masked_sentence1": "The firm expects revenue to reach [NUM] by [NUM].",
+    "masked_sentence2": "The firm expects revenue to reach [NUM] by [NUM]."
+  },
+  {
+    "id": "example_005",
+    "type": "pairwise",
+    "title": "EPS mismatch",
+    "sentence1": "EPS rose from $2.10 to $2.40.",
+    "sentence2": "EPS rose from $2.10 to $4.20.",
+    "baselines": [
+      {
+        "name": "baseline / bert-base-uncased",
+        "baseline_score": 0.981,
+        "nash_score": 0.767,
+        "text_score": 0.956,
+        "numeric_score": 0.526
+      },
+      {
+        "name": "FinBERT",
+        "baseline_score": 0.976,
+        "nash_score": 0.781,
+        "text_score": 0.951,
+        "numeric_score": 0.552
+      },
+      {
+        "name": "DeBERTa",
+        "baseline_score": 0.968,
+        "nash_score": 0.752,
+        "text_score": 0.942,
+        "numeric_score": 0.511
+      },
+      {
+        "name": "Sentence-BERT / all-MiniLM-L6-v2",
+        "baseline_score": 0.949,
+        "nash_score": 0.731,
+        "text_score": 0.918,
+        "numeric_score": 0.506
+      },
+      {
+        "name": "Qwen3-Embedding-0.6B",
+        "baseline_score": 0.958,
+        "nash_score": 0.773,
+        "text_score": 0.931,
+        "numeric_score": 0.58
+      }
+    ],
+    "numbers1": [
+      {
+        "id": "s1_n1",
+        "text": "$2.10",
+        "value": 2.1,
+        "start": 14,
+        "end": 19
+      },
+      {
+        "id": "s1_n2",
+        "text": "$2.40",
+        "value": 2.4,
+        "start": 23,
+        "end": 28
+      }
+    ],
+    "numbers2": [
+      {
+        "id": "s2_n1",
+        "text": "$2.10",
+        "value": 2.1,
+        "start": 14,
+        "end": 19
+      },
+      {
+        "id": "s2_n2",
+        "text": "$4.20",
+        "value": 4.2,
+        "start": 23,
+        "end": 28
+      }
+    ],
+    "alignments": [
+      {
+        "source": "s1_n1",
+        "target": "s2_n1",
+        "source_text": "$2.10",
+        "target_text": "$2.10",
+        "alignment_similarity": 0.98,
+        "numeric_gap": 0,
+        "status": "aligned"
+      },
+      {
+        "source": "s1_n2",
+        "target": "s2_n2",
+        "source_text": "$2.40",
+        "target_text": "$4.20",
+        "alignment_similarity": 0.95,
+        "numeric_gap": 1.8,
+        "status": "aligned"
+      }
+    ],
+    "heatmap": {
+      "rows": [
+        "$2.10",
+        "$2.40"
+      ],
+      "columns": [
+        "$2.10",
+        "$4.20"
+      ],
+      "values": [
+        [
+          0.98,
+          0.35
+        ],
+        [
+          0.31,
+          0.95
+        ]
+      ]
+    },
+    "masked_sentence1": "EPS rose from [NUM] to [NUM].",
+    "masked_sentence2": "EPS rose from [NUM] to [NUM]."
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "pair_id": 0,
+    "source": "10K",
+    "category": "Temporal",
+    "subcategory": "date",
+    "sentence_a": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2024 by $106 million.",
+      "num": "2024"
+    },
+    "sentence_b": {
+      "text": "A one percentage point change in assumed expected long-term rate of return on plan assets would increase or decrease the net period benefit cost of these plans in 2030 by $106 million.",
+      "num": "2030"
+    },
+    "sentence_c": {
+      "text": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2022.",
+      "num": "2022"
+    },
+    "sentence_d": {
+      "text": "AbbVie repurchased 10 million shares for $1.6 billion in 2023 and 8 million shares for $1.1 billion in 2010.",
+      "num": "2010"
+    }
+  },
+  {
+    "pair_id": 1,
+    "source": "10K",
+    "category": "Temporal",
+    "subcategory": "date",
+    "sentence_a": {
+      "text": "Diluted earnings per share in 2023 was $2.72 and included the following after-tax costs: (i) $6.7 billion related to the amortization of intangible assets; (ii) $5.0 billion for the change in fair value of contingent consideration liabilities; (iii) $3.5 billion related to intangible asset impairment; and (iv) $122 million of acquisition and integration expenses.",
+      "num": "2023"
+    },
+    "sentence_b": {
+      "text": "Diluted earnings per share in 2021 was $2.72 and included the following after-tax costs: (i) $6.7 billion related to the amortization of intangible assets; (ii) $5.0 billion for the change in fair value of contingent consideration liabilities; (iii) $3.5 billion related to intangible asset impairment; and (iv) $122 million of acquisition and integration expenses.",
+      "num": "2021"
+    },
+    "sentence_c": {
+      "text": "During the quarter ended December 31, 2023 the company also repaid €500 million aggregate principal amount of 1.50% senior euro notes and $1.3 billion aggregate principal amount of 3.75% senior notes at maturity.",
+      "num": "2023"
+    },
+    "sentence_d": {
+      "text": "During the quarter ended December 31, 2024 the company also repaid €500 million aggregate principal amount of 1.50% senior euro notes and $1.3 billion aggregate principal amount of 3.75% senior notes at maturity.",
+      "num": "2024"
+    }
+  },
+  {
+    "pair_id": 2,
+    "source": "10K",
+    "category": "Temporal",
+    "subcategory": "date",
+    "sentence_a": {
+      "text": "Financing cash flows in 2023 included repayment of $1.0 billion floating rate three-year term loan, $1.0 billion aggregate principal amount of the company's 2.85% senior notes and $350 million aggregate principal amount of the company's 2.80% senior notes.",
+      "num": "2023"
+    },
+    "sentence_b": {
+      "text": "Financing cash flows in 2008 included repayment of $1.0 billion floating rate three-year term loan, $1.0 billion aggregate principal amount of the company's 2.85% senior notes and $350 million aggregate principal amount of the company's 2.80% senior notes.",
+      "num": "2008"
+    },
+    "sentence_c": {
+      "text": "In 2022, Puerto Rico enacted Act 52-2002 (the “Puerto Rico Act”) allowing for a transition from a Puerto Rico excise tax levied on gross inventory purchases to an income-based tax beginning in 2023.",
+      "num": "2022"
+    },
+    "sentence_d": {
+      "text": "In 2039, Puerto Rico enacted Act 52-2002 (the “Puerto Rico Act”) allowing for a transition from a Puerto Rico excise tax levied on gross inventory purchases to an income-based tax beginning in 2023.",
+      "num": "2039"
+    }
+  }
+]
